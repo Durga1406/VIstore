@@ -1,0 +1,112 @@
+/* Global Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar Container */
+  .navbar {
+    position: fixed; /* Fixed to the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: whitesmoke; /* Navbar background color */
+    color: black;
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    padding: 10px 0;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the navbar content */
+  }
+  
+  /* Logo Styling */
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Navigation Links */
+  .navLinks {
+
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navList li {
+    margin: 0 15px;
+  }
+  
+  .navList a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navList a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+  }
+  
+  /* Hamburger Menu (for Mobile) */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    gap: 5px;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  /* Mobile Design: Show hamburger menu */
+  @media (max-width: 768px) {
+    .navLinks {
+        display: flex;
+        flex-direction: row; /* Keep links in a row on mobile */
+        justify-content: center; /* Center the links */
+        background-color: transparent; /* Make the background transparent for mobile */
+        position: relative; /* Reset position */
+        padding: 0; /* Remove extra padding */
+        margin-top: 0;
+    }
+  
+    .navLinks.show {
+      display: flex; /* Show links when hamburger menu is clicked */
+    }
+  
+    .navList li {
+      margin: 10px 0;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  }
+  
+  /* Body Padding to avoid overlap with fixed navbar */
+  body {
+    padding-top: 70px; /* Adjust based on navbar height */
+  }
+  
